@@ -31,8 +31,10 @@ jobs:
       - name: Build and Test
         run:   |
          if [ "$RUNNER_OS" == "Linux" ]; then
+              chmod +x gradlew
               ./gradlew build
          elif [ "$RUNNER_OS" == "macOS" ]; then
+              chmod +x gradlew
               ./gradlew build 
          elif [ "$RUNNER_OS" == "Windows" ]; then
               ./gradlew.bat build
@@ -48,6 +50,8 @@ jobs:
       semVer: ${{ steps.gitversion.outputs.semVer }}
     steps:
       # gitversion/execute step omitted for brevity
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v0.9.7
         with:
