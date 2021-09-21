@@ -56,6 +56,9 @@ jobs:
         uses: gittools/actions/gitversion/setup@v0.9.7
         with:
             versionSpec: '5.5.0'
+      - name: Fetch
+        run: |
+          git fetch --unshallow
       - name: Determine Version
         id: gitversion
         uses: gittools/actions/gitversion/execute@v0.9.7
