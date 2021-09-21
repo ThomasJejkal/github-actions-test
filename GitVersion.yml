@@ -1,0 +1,7 @@
+mode: ContinuousDeployment
+next-version: 0.0.1
+major-version-bump-message: 'Breaking:'
+minor-version-bump-message: '(Update|New):'
+patch-version-bump-message: 'Fix:'
+no-bump-message: '.*'
+commit-message-incrementing: Enabled
