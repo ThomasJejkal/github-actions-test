@@ -17,7 +17,7 @@ jobs:
       - name: Code Coverage
         run: |
              chmod +x gradlew
-             ./gradlew jacocoTestReport
+             ./gradlew build jacocoTestReport
         shell: bash
         
       - uses: coverallsapp/github-action@v1.1.2
