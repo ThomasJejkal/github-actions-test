@@ -2,4 +2,6 @@
 
 Test project for GitHub Actions.
 
-Done...
+- Branch created, now appying merge
+
+Done.
