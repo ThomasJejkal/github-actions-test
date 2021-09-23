@@ -15,10 +15,11 @@ jobs:
           architecture: 'x64'
 
       - name: Code Coverage
-        run:|
-            chmod +x gradlew
-            ./gradlew jacocoTestReport
+        run: |
+             chmod +x gradlew
+             ./gradlew jacocoTestReport
         shell: bash
-        uses: coverallsapp/github-action@v1.1.2
+        
+      - uses: coverallsapp/github-action@v1.1.2
         with:
-        github-token: ${{ github.token }}
+           github-token: ${{ github.token }}
