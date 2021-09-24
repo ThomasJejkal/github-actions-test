@@ -3,13 +3,16 @@ name: Changelog
 on:
    push:
       branches: [main, dev]
+
+env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
-- name: "Build Changelog"
-  id: build_changelog
-  uses: mikepenz/release-changelog-builder-action@{latest-release}
-  env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  steps:
-      - name: Display version
-        run: |
-          echo Changelog: ${{steps.build_changelog.outputs.changelog}}
+jobs:
+  code_coverage:
+    runs-on: ubuntu-latest
+    steps:
+         - uses: mikepenz/release-changelog-builder-action@{latest-release}
+
+         - name: "Build Changelog"
+           run: |
+                echo Changelog: ${{steps.build_changelog.outputs.changelog}}
