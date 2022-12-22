@@ -28,6 +28,7 @@ public class Dummy {
      * Default constructor.
      */
     public Dummy() {
+        System.out.println("Constructor called.");
     }
 
     /**
