@@ -10,4 +10,4 @@ Test project for GitHub Actions.
 - Release test
 - Fix added
 
-Done.
+Done
