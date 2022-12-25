@@ -9,5 +9,6 @@ Test project for GitHub Actions.
 - Changelog Test
 - Release test
 - Fix added
+- Test for Close applied
 
 Done
