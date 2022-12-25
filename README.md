@@ -10,5 +10,6 @@ Test project for GitHub Actions.
 - Release test
 - Fix added
 - Test for Close applied
+- Test for Close 2 applied
 
 Done
