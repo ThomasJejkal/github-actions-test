@@ -13,25 +13,25 @@ jobs:
         id: github_release
         uses: mikepenz/release-changelog-builder-action@v3
         with:
-           configuration: "configuration.json"
-           #configurationJson: |
-           # {
-           #   "template": "#{{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n#{{UNCATEGORIZED}}\n</details>",
-           #   "categories": [
-           #     {
-           #         "title": "## 🚀 Enhancements",
-           #         "labels": ["enhancement"]
-           #     },
-           #     {
-           #         "title": "## 🐛 Bugfixes",
-           #         "labels": ["fix"]
-           #     },
-           #     {
-           #         "title": "## 📦 Dependencies",
-           #         "labels": ["dependencies"]
-           #     }
-           #   ]
-           # }
+           #configuration: "configuration.json"
+           configurationJson: |
+            {
+              "template": "#{{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n#{{UNCATEGORIZED}}\n</details>",
+              "categories": [
+                {
+                    "title": "## 🚀 Enhancements",
+                    "labels": ["enhancement"]
+                },
+                {
+                    "title": "## 🐛 Bugfixes",
+                    "labels": ["fix"]
+                },
+                {
+                    "title": "## 📦 Dependencies",
+                    "labels": ["dependencies"]
+                }
+              ]
+            }
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
