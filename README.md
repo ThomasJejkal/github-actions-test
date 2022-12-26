@@ -13,5 +13,6 @@ Test project for GitHub Actions.
 - Test for Close 2 applied
 - Applied Enhancement #1
 - Applied Fix #1
+- Applied Enhancement #2
 
 Done
