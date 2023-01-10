@@ -18,5 +18,6 @@ Test project for GitHub Actions.
 - Applied Enhancement #4
 - Applied Enhancement #5
 - Applied new Enhancement
+- Enhancement by Issue
 
 Done
